@@ -14,24 +14,24 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
+      - name: Check out code 🔔
         uses: actions/checkout@v2
       
-      - name: Setup .NET 5
+      - name: Setup .NET 5 🦴
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }}
           
-      - name: Restore dependencies
+      - name: Restore dependencies 🛠
         run: dotnet restore
 
-      - name: Build app
+      - name: Build app 🚀
         run: dotnet build -c Release --no-restore
 
-      - name: Run automated tests
+      - name: Run automated tests 🧪
         run: dotnet test -c Release --no-build
       
-      - name: Publish app
+      - name: Publish app 🚢
         run: dotnet publish -c Release -o ./out
       
       - name: Deploy to Azure Web Apps
