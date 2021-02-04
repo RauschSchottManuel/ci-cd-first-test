@@ -26,8 +26,8 @@ jobs:
 
       - name: Sleep for 5 seconds 💤
           uses: jakejarvis/wait-action@master
-          with:
-            time: '5s'
+            with:
+              time: '5s'
 
       - name: Restore dependencies 🛠
         run: dotnet restore
